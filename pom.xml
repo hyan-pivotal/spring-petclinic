@@ -31,10 +31,18 @@
     <nohttp-checkstyle.version>0.0.4.RELEASE</nohttp-checkstyle.version>
     <spring-format.version>0.0.25</spring-format.version>
     <wavefront.version>2.0.1</wavefront.version>
+    <spring-cloud.version>Hoxton.SR8</spring-cloud.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-dependencies</artifactId>
+        <version>${spring-cloud.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
       <dependency>
         <groupId>com.wavefront</groupId>
         <artifactId>wavefront-spring-boot-bom</artifactId>
